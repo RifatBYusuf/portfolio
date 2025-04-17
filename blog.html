@@ -4,22 +4,36 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Inter', sans-serif;
       scroll-behavior: smooth;
       background-color: #151623;
       color: #52D0FC;
+      
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    h5 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-top: 20px;
+      margin-bottom: 10px;
     }
 
     .profile-img {
       width: 150px;
       height: 150px;
       object-fit: cover;
-      border: 4px solid #fff;
+      border: 3px solid #fff;
     }
     section {
       padding: 30px 0;
@@ -47,7 +61,6 @@
     }
     .form-control {
       display: block;
-      width: 50%;
       padding: .375rem .75rem;
       font-size: 1rem;
       font-weight: 400;
@@ -72,6 +85,42 @@
         
         color: #ffffff !important;
     }
+    main.container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    section {
+      max-width: 800px;
+      width: 100%;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .profile-img {
+      width: 180px;
+      height: 180px;
+      object-fit: cover;
+      border: 1px solid #000000;
+
+   }
+
+
   </style>
   
   
@@ -79,7 +128,7 @@
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#">Portfolio</a>
+      <a class="navbar-brand" href="#">My Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -87,113 +136,211 @@
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center" href="https://www.linkedin.com/in/rifatyusuf/" target="_blank">
+              <img src="linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px; margin-right: 5px;">
+              LinkedIn
+            </a>
+          </li>
         </ul>
       </div>
     </div>
   </nav>
 
-  <header class="bg-primary text-white text-center py-5 mt-5">
+  <header class="profile-header text-white text-center py-5 mt-5">
+    
     <img src="rifat.png" alt="Rifat" class="rounded-circle profile-img mb-3">
-    <h1>Rifat's Portfolio</h1>
+    <h1>Rifat Bin Yusuf</h1>
     <p class="lead">Developer | Writer | Analyst</p>
+
   </header>
 
-  <main class="container">
+  <main class="container ">
     <section id="about" class="mt-0">
       <h2>About Me</h2>
       <p>Software Engineer with practical experience in AI/ML, LangChain, and Python. Skilled in LLMs (LLaMA), CI/CD, software design and technical writing. Additionally, I have a background in content and proposal writing. I'm focused on building scalable AI solutions for real world impact.</p>
     </section>
 
     <section id="experience" class="mt-0">
-      <h2>Experience</h2>
+      <h2 class="text-center">Experience</h2>
       <div class="row g-4">
-        <!-- Experience Cards (same as before, unchanged) -->
+    
         <!-- Software Engineer -->
-        <div class="col-md-6">
+        <div class="col-12">
           <div class="card experience-card h-100">
-            <div class="card-body d-flex">
-              <img src="technuf.jpg" alt="Technuf" class="rounded-circle me-3" style="width:50px;height:50px;object-fit:cover;border:2px solid #007bff;">
+            <div class="card-body d-flex flex-column align-items-center text-center">
+              <img src="technuf.jpg" alt="Technuf" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
               <div>
-                <h5 class="card-title mb-2">Software Engineer @ Technuf</h5>
-                <h6 class="card-subtitle mb-2">Aug 2024 – Jan 2025 | Remote | Rockville, Maryland, USA </h6>
+                <h5 class="card-title mb-2">Software Engineer - Technuf</h5>
+                <h6 class="card-subtitle mb-2">Aug 2024 – Jan 2025 | Remote | Rockville, Maryland, USA</h6>
                 <p class="card-text mb-0">Skills: Python, CI/CD, LangChain, LLM, Docker, SharePoint, Proposal & Technical Writing.</p>
               </div>
             </div>
           </div>
         </div>
+    
         <!-- AI/ML Intern -->
-        <div class="col-md-6">
+        <div class="col-12">
           <div class="card experience-card h-100">
-            <div class="card-body d-flex">
-              <img src="technuf.jpg" alt="Technuf" class="rounded-circle me-3" style="width:50px;height:50px;object-fit:cover;border:2px solid #007bff;">
+            <div class="card-body d-flex flex-column align-items-center text-center">
+              <img src="technuf.jpg" alt="Technuf" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
               <div>
-                <h5 class="card-title mb-2">AI/ML Intern @ Technuf</h5>
-                <h6 class="card-subtitle mb-2">Jun 2024 – Aug 2024 (3 mos) | Internship</h6>
+                <h5 class="card-title mb-2">AI/ML Intern - Technuf</h5>
+                <h6 class="card-subtitle mb-2">Jun 2024 – Aug 2024| Internship</h6>
                 <p class="card-text mb-0">Skills: Python, LangChain, Software Design.</p>
               </div>
             </div>
           </div>
         </div>
+    
         <!-- Content Writer -->
-        <div class="col-md-6">
+        <div class="col-12">
           <div class="card experience-card h-100">
-            <div class="card-body d-flex">
-              <img src="webase.png" alt="Webase" class="rounded-circle me-3" style="width:50px;height:50px;object-fit:cover;border:2px solid #007bff;">
+            <div class="card-body d-flex flex-column align-items-center text-center">
+              <img src="webase.png" alt="Webase" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
               <div>
-                <h5 class="card-title mb-2">Content Writer @ Webase</h5>
-                <h6 class="card-subtitle mb-2">Oct 2023 – Dec 2023 (3 mos) | On‑site</h6>
+                <h5 class="card-title mb-2">Content Writer - Webase</h5>
+                <h6 class="card-subtitle mb-2">Oct 2023 – Dec 2023 | On‑site</h6>
                 <p class="card-text mb-0">Skills: Web Content Writing, Social Media Marketing, SEO</p>
               </div>
             </div>
           </div>
         </div>
+    
         <!-- GameRiv -->
-        <div class="col-md-6">
+        <div class="col-12">
           <div class="card experience-card h-100">
-            <div class="card-body d-flex">
-              <img src="gameriv.png" alt="GameRiv" class="rounded-circle me-3" style="width:50px;height:50px;object-fit:cover;border:2px solid #007bff;">
+            <div class="card-body d-flex flex-column align-items-center text-center">
+              <img src="gameriv.png" alt="GameRiv" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
               <div>
-                <h5 class="card-title mb-2">Web Content Writer @ GameRiv</h5>
+                <h5 class="card-title mb-2">Web Content Writer - GameRiv</h5>
                 <h6 class="card-subtitle mb-2">Aug 2020 – Mar 2022 | Remote, Dhaka</h6>
                 <p class="card-text mb-1">Skills: SEO, Web Content Writing, eSports.</p>
               </div>
             </div>
           </div>
         </div>
+    
         <!-- DRMC IT Club -->
-        <div class="col-md-12 d-flex justify-content-center">
-          <div class="card experience-card h-100" style="width: 50%;">
-            <div class="card-body d-flex">
-              <img src="drmcitclub.png" alt="DRMC IT Club" class="rounded-circle me-3" style="width:50px;height:50px;object-fit:cover;border:2px solid #007bff;">
+        <div class="col-12">
+          <div class="card experience-card h-100">
+            <div class="card-body d-flex flex-column align-items-center text-center">
+              <img src="drmcitclub.png" alt="DRMC IT Club" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
               <div>
-                <h5 class="card-title mb-3">Founding Member @ DRMC IT Club</h5>
-                <h6 class="card-subtitle mb-3">Jul 2017 – Feb 2018 (8 mos)</h6>
+                <h5 class="card-title mb-3">Founding Member - DRMC IT Club</h5>
+                <h6 class="card-subtitle mb-3">Jul 2017 – Feb 2018</h6>
                 <p class="card-text mb-1">Founding Organizing Secretary.</p>
               </div>
             </div>
           </div>
         </div>
+    
+      </div>
+    </section>
+    
+    <section id="education" class="text-center">
+      <h2>Education</h2>
+    
+      <!-- University of Tasmania -->
+      <div class="card experience-card mb-4">
+        <div class="card-body d-flex flex-column align-items-center text-center">
+          <img src="utas.png" alt="University of Tasmania" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+          <div>
+            <h5 class="card-title mb-2">University of Tasmania</h5>
+            <h6 class="card-subtitle mb-2">Master of Information Technology and Systems</h6>
+            <p class="card-text mb-1">Feb 2025 – Dec 2026</p>
+            <p class="card-text">Majoring in Data Analytics and Artificial Intelligence</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- North South University -->
+      <div class="card experience-card mb-4">
+        <div class="card-body d-flex flex-column align-items-center text-center">
+          <img src="nsu.png" alt="North South University" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+          <div>
+            <h5 class="card-title mb-2">North South University</h5>
+            <h6 class="card-subtitle mb-2">Bachelor of Science – BS, Computer Science and Engineering</h6>
+            <p class="card-text">Feb 2019 – Jun 2023</p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contact">
+    <section id="skills" class="text-center">
+      <h2>Skills</h2>
+      <div class="row justify-content-center mt-4">
+        <div class="col-md-6 text-start">
+    
+          <h5>Languages</h5>
+          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.2s;">
+            <li class="list-group-item bg-dark text-info border-secondary">Python</li>
+            <li class="list-group-item bg-dark text-info border-secondary">JavaScript</li>
+            <li class="list-group-item bg-dark text-info border-secondary">HTML/CSS</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Bootstrap</li>
+          </ul>
+    
+          <h5>Area of Expertise</h5>
+          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.4s;">
+            <li class="list-group-item bg-dark text-info border-secondary">AI/ML</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Computer Vision</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Web Development</li>
+          </ul>
+    
+          <h5>Office Skills</h5>
+          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.6s;">
+            <li class="list-group-item bg-dark text-info border-secondary">Microsoft SharePoint</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Office 365</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Technical Writing</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Proposal Writing</li>
+          </ul>
+    
+          <h5>Digital Marketing Skills</h5>
+          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.8s;">
+            <li class="list-group-item bg-dark text-info border-secondary">Social Media Marketing</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Search Engine Optimization</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Ads Tuning (Google/Meta)</li>
+          </ul>
+
+          <h5>Passion</h5>
+          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.8s;">
+            <li class="list-group-item bg-dark text-info border-secondary">Gaming PC Building & Assembly</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Esports</li>
+            <li class="list-group-item bg-dark text-info border-secondary">PC Hardware Enthusiast</li>
+          </ul>
+
+        </div>
+      </div>
+    </section>
+    
+    
+    
+
+
+    <section id="contact" class="text-center">
       <h2>Contact</h2>
-      <form action="mailto:youremail@example.com" method="POST" enctype="text/plain">
-        <div class="mb-3">
-          <label for="name" class="form-label">Name</label>
-          <input type="text" class="form-control" id="name" name="Name" required>
-        </div>
-        <div class="mb-3">
-          <label for="email" class="form-label">Email</label>
-          <input type="email" class="form-control" id="email" name="Email" required>
-        </div>
-        <div class="mb-3">
-          <label for="message" class="form-label">Message</label>
-          <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send</button>
-      </form>
+      <div class="d-flex justify-content-center">
+        <form action="mailto:youremail-example.com" method="POST" enctype="text/plain" style="width: 100%; max-width: 600px;">
+          <div class="mb-3 text-start">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="Name" required>
+          </div>
+          <div class="mb-3 text-start">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" class="form-control" id="email" name="Email" required>
+          </div>
+          <div class="mb-3 text-start">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Send</button>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
 
@@ -201,7 +348,7 @@
     &copy; <span id="year"></span> Rifat. All rights reserved.
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
