@@ -28,19 +28,15 @@
           <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="#demos">Demo</a></li>
+
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center" href="https://www.linkedin.com/in/rifatyusuf/" target="_blank">
               <img src="linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px; margin-right: 5px;">
               LinkedIn
             </a>
           </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="#chatbot">Chatbot</a>
-          </li>
-          
-
+      
           <li class="nav-item d-flex align-items-center ms-3">
             <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" id="modeToggle">
@@ -217,46 +213,36 @@
     
       </div>
     </section>
-    
-    
-    
-    
-
-
-    <section id="contact" class="text-center">
-      <h2>Contact</h2>
-      <div class="d-flex justify-content-center">
-        <form action="mailto:youremail-example.com" method="POST" enctype="text/plain" style="width: 100%; max-width: 600px;">
-          <div class="mb-3 text-start">
-            <label for="name" class="form-label">Name</label>
-            <input type="text" class="form-control" id="name" name="Name" required>
-          </div>
-          <div class="mb-3 text-start">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" class="form-control" id="email" name="Email" required>
-          </div>
-          <div class="mb-3 text-start">
-            <label for="message" class="form-label">Message</label>
-            <textarea class="form-control" id="message" name="Message" rows="5" required></textarea>
-          </div>
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary">Send</button>
-          </div>
-        </form>
-      </div>
-    </section>
   </main>
+  
+  <section id="demos" class="text-center my-5">
+    <h2 class="text-info mb-4">Interactive Demos</h2>
+    <div class="container d-flex justify-content-center flex-wrap" style="gap: 20px; max-width: 1400px;">
 
-  <section id="chatbot" class="text-center mt-5">
-    <h2>Talk to the Bot</h2>
-    <iframe 
-      src="https://huggingface.co/spaces/microsoft/DialoGPT-medium" 
-      width="100%" 
-      height="600" 
-      style="border:1px solid #ccc; border-radius: 8px;">
-    </iframe>
+
+      
+      <!-- Demo 1 -->
+      <div class="card demo-card">
+        <video class="card-img-top" src="demo1.mp4" autoplay muted loop playsinline></video>
+        <div class="card-body text-center">
+          <h5 class="card-title text-info">AI/ML - Computer Vision Demo - 1</h5>
+          <p class="card-text text-light">Autoplay preview. Hover to highlight.</p>
+        </div>
+      </div>
+  
+      <!-- Demo 2 -->
+      <div class="card demo-card">
+        <video class="card-img-top" src="demo2.mp4" autoplay muted loop playsinline></video>
+        <div class="card-body text-center">
+          <h5 class="card-title text-info">AI/ML - Computer Vision Demo - 2</h5>
+          <p class="card-text text-light">Autoplay preview. Hover to highlight.</p>
+        </div>
+      </div>
+  
+    </div>
   </section>
-
+  
+  
   <footer class="bg-dark text-center py-3">
     &copy; <span id="year"></span> Rifat. All rights reserved.
   </footer>
