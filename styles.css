@@ -33,21 +33,21 @@ body {
     margin: 0 auto;
   }
   
-  .demo-card {
-    background-color: #1e1e1e;
-    border: 1px solid #0dcaf0;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 640px;
-    margin: 20px auto;
-  }
-  
-  .demo-card video {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    border-bottom: 1px solid #0dcaf0;
-    transition: transform 0.3s;
-  }
+    .demo-card {
+      background-color: #1e1e1e;
+      border: 1px solid #0dcaf0;
+      transition: transform 0.3s, box-shadow 0.3s;
+      width: 100%;
+      max-width: 640px;
+    }
+    
+    .demo-card video {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-bottom: 1px solid #0dcaf0;
+      transition: transform 0.3s;
+    }
   
   .demo-card:hover video {
     transform: scale(1.02);
