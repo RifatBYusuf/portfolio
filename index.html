@@ -1,28 +1,29 @@
 <!-- portfolio/index.html -->
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
-  
-  
+<head>
+  <!-- Meta & Title -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Portfolio</title>
+
+  <!-- Fonts & Stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <link href="styles.css" rel="stylesheet">
 </head>
+
 <body class="dark-mode">
 
-
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
       <a class="navbar-brand text-info" href="#">My Portfolio</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
         <span class="navbar-toggler-icon"></span>
       </button>
-
       <div class="collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
@@ -30,227 +31,214 @@
           <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
           <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
           <li class="nav-item"><a class="nav-link" href="#demos">Demo</a></li>
-
           <li class="nav-item">
             <a class="nav-link d-flex align-items-center" href="https://www.linkedin.com/in/rifatyusuf/" target="_blank">
-              <img src="linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px; margin-right: 5px;">
-              LinkedIn
+              <img src="linkedin.png" alt="LinkedIn" style="width: 20px; height: 20px; margin-right: 5px;">LinkedIn
             </a>
           </li>
-      
           <li class="nav-item d-flex align-items-center ms-3">
             <div class="form-check form-switch">
               <input class="form-check-input" type="checkbox" id="modeToggle">
               <label class="form-check-label" for="modeToggle" style="font-size: 0.9rem;">Dark Mode</label>
             </div>
           </li>
-          
         </ul>
       </div>
     </div>
   </nav>
 
+  <!-- Header / Hero -->
   <header class="profile-header text-white text-center py-5 mt-5">
-    
     <img src="rifat.png" alt="Rifat" class="rounded-circle profile-img mb-3">
     <h1>Rifat Bin Yusuf</h1>
-    <p class="lead">
-      <span>Developer</span> | <span>Writer</span> | <span>Analyst</span>
-    </p>
+    <p class="lead"><span>Developer</span> | <span>Writer</span> | <span>Analyst</span></p>
     <p><i class="bi bi-geo-alt-fill"></i> Hobart, Tasmania</p>
-    
   </header>
 
-  <main class="container ">
-    <section id="about" class="mt-0">
+  <main class="container">
+    <!-- About Section -->
+    <section id="about">
       <h2>About Me</h2>
-      <p>Software Engineer with practical experience in AI/ML, LangChain, and Python. Skilled in LLMs (LLaMA), CI/CD, software design and technical writing. Additionally, I have a background in content and proposal writing. I'm focused on building scalable AI solutions for real world impact.</p>
+      <p>Software Engineer with experience in AI/ML, LangChain, Python, LLMs, CI/CD, Docker, and writing. Focused on scalable AI solutions.</p>
     </section>
 
-    <section id="experience" class="mt-0">
+    <!-- Experience Section -->
+    <section id="experience">
       <h2 class="text-center">Experience</h2>
       <div class="row g-4">
-    
-        <!-- Software Engineer -->
+        <!-- Job Cards -->
+        <!-- Use a loop in real projects to reduce repetition -->
+        <!-- 1 -->
         <div class="col-12">
-          <div class="card experience-card h-100">
-            <div class="card-body d-flex flex-column align-items-center text-center">
-              <img src="technuf.jpg" alt="Technuf" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
-              <div>
-                <h5 class="card-title mb-2">Software Engineer - Technuf</h5>
-                <h6 class="card-subtitle mb-2">Aug 2024 – Jan 2025 | Remote | Rockville, Maryland, USA</h6>
-                <p class="card-text mb-0">Skills: Python, CI/CD, LangChain, LLM, Docker, SharePoint, Proposal & Technical Writing.</p>
-              </div>
+          <div class="card experience-card h-100 text-center">
+            <div class="card-body">
+              <img src="technuf.jpg" alt="Technuf" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+              <h5>Software Engineer - Technuf</h5>
+              <h6>Aug 2024 – Jan 2025 | Remote | USA</h6>
+              <p>Python, CI/CD, LangChain, LLM, Docker, SharePoint, Writing.</p>
             </div>
           </div>
         </div>
-    
-        <!-- AI/ML Intern -->
+
+        <!-- 2 -->
         <div class="col-12">
-          <div class="card experience-card h-100">
-            <div class="card-body d-flex flex-column align-items-center text-center">
-              <img src="technuf.jpg" alt="Technuf" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
-              <div>
-                <h5 class="card-title mb-2">AI/ML Intern - Technuf</h5>
-                <h6 class="card-subtitle mb-2">Jun 2024 – Aug 2024| Remote | Rockville, Maryland, USA</h6>
-                <p class="card-text mb-0">Skills: Python, LangChain, Software Design.</p>
-              </div>
+          <div class="card experience-card h-100 text-center">
+            <div class="card-body">
+              <img src="technuf.jpg" alt="Technuf" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+              <h5>AI/ML Intern - Technuf</h5>
+              <h6>Jun 2024 – Aug 2024 | Remote | USA</h6>
+              <p>Python, LangChain, Software Design.</p>
             </div>
           </div>
         </div>
-    
-        <!-- Content Writer -->
+
+        <!-- 3 -->
         <div class="col-12">
-          <div class="card experience-card h-100">
-            <div class="card-body d-flex flex-column align-items-center text-center">
-              <img src="webase.png" alt="Webase" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
-              <div>
-                <h5 class="card-title mb-2">Content Writer - Webase</h5>
-                <h6 class="card-subtitle mb-2">Oct 2023 – Dec 2023 | On‑site | Dhaka, Bangladesh</h6>
-                <p class="card-text mb-0">Skills: Web Content Writing, Social Media Marketing, SEO</p>
-              </div>
+          <div class="card experience-card h-100 text-center">
+            <div class="card-body">
+              <img src="webase.png" alt="Webase" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+              <h5>Content Writer - Webase</h5>
+              <h6>Oct 2023 – Dec 2023 | Dhaka</h6>
+              <p>Web Content, SMM, SEO</p>
             </div>
           </div>
         </div>
-    
-        <!-- GameRiv -->
+
+        <!-- 4 -->
         <div class="col-12">
-          <div class="card experience-card h-100">
-            <div class="card-body d-flex flex-column align-items-center text-center">
-              <img src="gameriv.png" alt="GameRiv" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
-              <div>
-                <h5 class="card-title mb-2">Web Content Writer - GameRiv</h5>
-                <h6 class="card-subtitle mb-2">Aug 2020 – Mar 2022 | Remote | Dhaka, Bangladesh</h6>
-                <p class="card-text mb-1">Skills: SEO, Web Content Writing, eSports.</p>
-              </div>
+          <div class="card experience-card h-100 text-center">
+            <div class="card-body">
+              <img src="gameriv.png" alt="GameRiv" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+              <h5>Web Content Writer - GameRiv</h5>
+              <h6>Aug 2020 – Mar 2022 | Remote</h6>
+              <p>SEO, Web Content, eSports</p>
             </div>
           </div>
         </div>
-    
-        <!-- DRMC IT Club -->
+
+        <!-- 5 -->
         <div class="col-12">
-          <div class="card experience-card h-100">
-            <div class="card-body d-flex flex-column align-items-center text-center">
-              <img src="drmcitclub.png" alt="DRMC IT Club" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000000;">
-              <div>
-                <h5 class="card-title mb-3">Founding Member - DRMC IT CLUB</h5>
-                <h6 class="card-subtitle mb-3">Jul 2017 – Feb 2018</h6>
-                <p class="card-text mb-1">Founding Organizing Secretary.</p>
-              </div>
+          <div class="card experience-card h-100 text-center">
+            <div class="card-body">
+              <img src="drmcitclub.png" alt="DRMC IT Club" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+              <h5>Founding Member - DRMC IT CLUB</h5>
+              <h6>Jul 2017 – Feb 2018</h6>
+              <p>Organizing Secretary</p>
             </div>
-          </div>
-        </div>
-    
-      </div>
-    </section>
-    
-    <section id="education" class="text-center">
-      <h2>Education</h2>
-    
-      <!-- University of Tasmania -->
-      <div class="card experience-card mb-4">
-        <div class="card-body d-flex flex-column align-items-center text-center">
-          <img src="utas.png" alt="University of Tasmania" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
-          <div>
-            <h5 class="card-title mb-2">University of Tasmania</h5>
-            <h6 class="card-subtitle mb-2">Master of Information Technology and Systems</h6>
-            <p class="card-text mb-1">Feb 2025 – Dec 2026</p>
-            <p class="card-text">Majoring in Data Analytics and Artificial Intelligence</p>
-          </div>
-        </div>
-      </div>
-    
-      <!-- North South University -->
-      <div class="card experience-card mb-4">
-        <div class="card-body d-flex flex-column align-items-center text-center">
-          <img src="nsu.png" alt="North South University" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
-          <div>
-            <h5 class="card-title mb-2">North South University</h5>
-            <h6 class="card-subtitle mb-2">Bachelor of Science – BS, Computer Science and Engineering</h6>
-            <p class="card-text">Feb 2019 – Jun 2023</p>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- Education Section -->
+    <section id="education" class="text-center">
+      <h2>Education</h2>
+
+      <!-- UTAS -->
+      <div class="card experience-card mb-4 text-center">
+        <div class="card-body">
+          <img src="utas.png" alt="UTAS" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+          <h5>University of Tasmania</h5>
+          <h6>Master of IT and Systems</h6>
+          <p>Feb 2025 – Dec 2026</p>
+          <p>Data Analytics & AI</p>
+        </div>
+      </div>
+
+      <!-- NSU -->
+      <div class="card experience-card mb-4 text-center">
+        <div class="card-body">
+          <img src="nsu.png" alt="NSU" class="rounded-circle mb-3" style="width:50px;height:50px;object-fit:cover;border:1px solid #000;">
+          <h5>North South University</h5>
+          <h6>BS, CSE</h6>
+          <p>Feb 2019 – Jun 2023</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
     <section id="skills" class="text-center">
       <h2>Skills</h2>
       <div class="row justify-content-center mt-4">
-    
-        <!-- Column 1 -->
+
+        <!-- Left Column -->
         <div class="col-md-6 text-start">
           <h5 class="text-center">Languages</h5>
-          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.2s;">
+          <ul class="list-group mb-3">
             <li class="list-group-item bg-dark text-info border-secondary">Python</li>
             <li class="list-group-item bg-dark text-info border-secondary">JavaScript</li>
             <li class="list-group-item bg-dark text-info border-secondary">HTML/CSS</li>
             <li class="list-group-item bg-dark text-info border-secondary">Bootstrap</li>
           </ul>
-    
-          <h5 class="text-center">Area of Expertise</h5>
-          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.3s;">
+
+          <h5 class="text-center">Expertise</h5>
+          <ul class="list-group mb-3">
             <li class="list-group-item bg-dark text-info border-secondary">AI/ML</li>
             <li class="list-group-item bg-dark text-info border-secondary">Computer Vision</li>
             <li class="list-group-item bg-dark text-info border-secondary">Web Development</li>
           </ul>
         </div>
-    
-        <!-- Column 2 -->
+
+        <!-- Right Column -->
         <div class="col-md-6 text-start">
           <h5 class="text-center">Office Skills</h5>
-          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.4s;">
-            <li class="list-group-item bg-dark text-info border-secondary">Microsoft SharePoint</li>
+          <ul class="list-group mb-3">
+            <li class="list-group-item bg-dark text-info border-secondary">SharePoint</li>
             <li class="list-group-item bg-dark text-info border-secondary">Office 365</li>
             <li class="list-group-item bg-dark text-info border-secondary">Technical Writing</li>
             <li class="list-group-item bg-dark text-info border-secondary">Proposal Writing</li>
           </ul>
-    
-          <h5 class="text-center">Digital Marketing Skills</h5>
-          <ul class="list-group mb-3 fade-in-up" style="animation-delay: 0.5s;">
-            <li class="list-group-item bg-dark text-info border-secondary">Social Media Marketing</li>
-            <li class="list-group-item bg-dark text-info border-secondary">Search Engine Optimization</li>
-            <li class="list-group-item bg-dark text-info border-secondary">Ads Tuning (Google/Meta)</li>
+
+          <h5 class="text-center">Marketing Skills</h5>
+          <ul class="list-group mb-3">
+            <li class="list-group-item bg-dark text-info border-secondary">SMM</li>
+            <li class="list-group-item bg-dark text-info border-secondary">SEO</li>
+            <li class="list-group-item bg-dark text-info border-secondary">Ads Tuning</li>
           </ul>
         </div>
-    
+      </div>
+    </section>
+
+    <!-- Demos Section -->
+    <section id="demos" class="text-center my-5">
+      <h2 class="text-info mb-4">Interactive Demos</h2>
+      <div class="container">
+        <div class="row justify-content-center gy-4">
+
+          <!-- Demo 1 -->
+          <div class="col-12 col-md-12 d-flex justify-content-center">
+            <div class="card demo-card">
+              <video class="card-img-top" src="demo1.mp4" autoplay muted loop playsinline></video>
+              <div class="card-body text-center">
+                <h5 class="card-title text-info">AI/ML - Computer Vision: Demo 1</h5>
+              </div>
+            </div>
+          </div>
+
+          <!-- Demo 2 -->
+          <div class="col-12 col-md-12 d-flex justify-content-center">
+            <div class="card demo-card">
+              <video class="card-img-top" src="demo2.mp4" autoplay muted loop playsinline></video>
+              <div class="card-body text-center">
+                <h5 class="card-title text-info">AI/ML - Computer Vision: Demo 2</h5>
+              </div>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   </main>
-  
-<section id="demos" class="text-center my-5">
-  <h2 class="text-info mb-4">Interactive Demos</h2>
-  <div class="container">
-    <div class="row justify-content-center gy-4">
-    
-      <div class="col-12 col-md-12 d-flex justify-content-center">
-        <div class="card demo-card">
-          <video class="card-img-top" src="demo1.mp4" autoplay muted loop playsinline></video>
-          <div class="card-body text-center">
-            <h5 class="card-title text-info">AI/ML - Computer Vision: Demo 1</h5>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-12 col-md-12 d-flex justify-content-center">
-        <div class="card demo-card">
-          <video class="card-img-top" src="demo2.mp4" autoplay muted loop playsinline></video>
-          <div class="card-body text-center">
-            <h5 class="card-title text-info">AI/ML - Computer Vision: Demo 2</h5>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-  
-  
+  <!-- Footer -->
   <footer class="bg-dark text-center py-3">
     &copy; <span id="year"></span> Rifat. All rights reserved.
   </footer>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 
 </body>
+
 </html>
