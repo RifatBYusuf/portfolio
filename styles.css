@@ -75,7 +75,7 @@ body {
   .experience-card {
     transition: transform 0.2s, box-shadow 0.2s;
     background-color: #1e1e1e;
-    border: 1px solid #ac1111;
+    border: 1px solid #0d082c;
     color: #52D0FC;
   }
   
