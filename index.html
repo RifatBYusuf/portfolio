@@ -120,6 +120,32 @@
       animation: fadeInUp 0.8s ease-in-out forwards;
       opacity: 0;
     }
+
+    .lead span {
+      transition: text-shadow 0.3s ease, color 0.3s ease;
+      cursor: default;
+    }
+
+    .lead span:hover {
+      color: #52D0FC;
+      text-shadow: 0 0 10px #52D0FC, 0 0 20px #52D0FC;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </style>
   
   
@@ -154,8 +180,10 @@
     
     <img src="rifat.png" alt="Rifat" class="rounded-circle profile-img mb-3">
     <h1>Rifat Bin Yusuf</h1>
-    <p class="lead">Developer | Writer | Analyst</p>
-
+    <p class="lead">
+      <span>Developer</span> | <span>Writer</span> | <span>Analyst</span>
+    </p>
+    
   </header>
 
   <main class="container ">
