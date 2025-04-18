@@ -1,0 +1,183 @@
+<style>
+body {
+  font-family: 'Inter', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #151623;
+  color: #52D0FC;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: 500;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.profile-img {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border: 1px solid #000;
+}
+
+section {
+  padding: 30px 0;
+  max-width: 800px;
+  width: 100%;
+}
+
+p {
+  color: #ffffff !important;
+}
+
+.experience-card {
+  transition: transform .2s, box-shadow .2s;
+  background-color: #1e1e1e;
+  border: 1px solid #ac1111;
+  color: #52D0FC;
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 15px 15px 16px rgba(17, 221, 44, 0.1);
+}
+
+.card-title, .card-subtitle, .card-text,
+.form-label, .form-control, .btn {
+  color: #52D0FC;
+}
+
+.form-control {
+  display: block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.form-control:focus {
+  background-color: #1c1c1c;
+  color: #52D0FC;
+}
+
+footer {
+  background-color: #1a1a1a;
+  color: #52D0FC;
+}
+
+.navbar .nav-link,
+.navbar .navbar-brand {
+  color: #000 !important;
+}
+
+.navbar-toggler {
+  border-color: #000;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar {
+  z-index: 1050;
+  position: relative;
+}
+
+main.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.8s ease-in-out forwards;
+  opacity: 0;
+}
+
+.lead span {
+  transition: text-shadow 0.3s ease, color 0.3s ease;
+  cursor: default;
+}
+
+.lead span:hover {
+  color: #52D0FC;
+  text-shadow: 5px 0 10px #52D0FC, 5px 0 20px #52D0FC;
+}
+
+/* === Light Mode Styling === */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body:not(.dark-mode) {
+  background-color: #f9f9f9;
+  color: #111;
+}
+
+body:not(.dark-mode) .experience-card,
+body:not(.dark-mode) .list-group-item,
+body:not(.dark-mode) .form-control,
+body:not(.dark-mode) footer {
+  background-color: #fff !important;
+  color: #000000 !important;
+  border: 1px solid #ac1111;
+  
+}
+
+body:not(.dark-mode) h2,
+body:not(.dark-mode) h5,
+body:not(.dark-mode) .card-title,
+body:not(.dark-mode) .card-subtitle,
+body:not(.dark-mode) .card-text {
+  color: #000000 !important;
+}
+
+body:not(.dark-mode) .btn {
+  background-color: #007bff;
+  color: #fff !important;
+}
+
+body:not(.dark-mode) .nav-link,
+body:not(.dark-mode) .navbar-brand {
+  color: #000 !important;
+}
+
+body:not(.dark-mode) .lead span:hover {
+  color: #52D0FC;
+  text-shadow: 5px 0 10px #52D0FC, 5px 0 20px #52D0FC;
+}
+
+body:not(.dark-mode) .profile-header h1,
+body:not(.dark-mode) .profile-header .lead,
+body:not(.dark-mode) p,
+body:not(.dark-mode) .card-text {
+  color: #000 !important;
+}
+
+body:not(.dark-mode) .form-label {
+  
+  color: #000 !important;
+}
+
+
+
+
+</style>
