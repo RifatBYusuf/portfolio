@@ -48,13 +48,13 @@
     .experience-card {
       transition: transform .2s, box-shadow .2s;
       background-color: #1e1e1e;
-      border: 1px solid #333;
+      border: 1px solid #ac1111;
       color: #52D0FC;
     }
 
     .experience-card:hover {
       transform: translateY(-5px);
-      box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+      box-shadow: 15px 15px 16px rgba(17, 221, 44, 0.1);
     }
 
     .card-title, .card-subtitle, .card-text,
@@ -128,21 +128,64 @@
 
     .lead span:hover {
       color: #52D0FC;
-      text-shadow: 0 0 10px #52D0FC, 0 0 20px #52D0FC;
+      text-shadow: 5px 0 10px #52D0FC, 5px 0 20px #52D0FC;
     }
 
+    /* === Light Mode Styling === */
+    body {
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
+    body:not(.dark-mode) {
+      background-color: #f9f9f9;
+      color: #111;
+    }
 
+    body:not(.dark-mode) .experience-card,
+    body:not(.dark-mode) .list-group-item,
+    body:not(.dark-mode) .form-control,
+    body:not(.dark-mode) footer {
+      background-color: #fff !important;
+      color: #000000 !important;
+      border-color: #ccc !important;
+      
+    }
 
+    body:not(.dark-mode) h2,
+    body:not(.dark-mode) h5,
+    body:not(.dark-mode) .card-title,
+    body:not(.dark-mode) .card-subtitle,
+    body:not(.dark-mode) .card-text {
+      color: #000000 !important;
+    }
 
+    body:not(.dark-mode) .btn {
+      background-color: #007bff;
+      color: #fff !important;
+    }
 
+    body:not(.dark-mode) .nav-link,
+    body:not(.dark-mode) .navbar-brand {
+      color: #000 !important;
+    }
 
+    body:not(.dark-mode) .lead span:hover {
+      color: #52D0FC;
+      text-shadow: 5px 0 10px #52D0FC, 5px 0 20px #52D0FC;
+    }
 
+    body:not(.dark-mode) .profile-header h1,
+    body:not(.dark-mode) .profile-header .lead,
+    body:not(.dark-mode) p,
+    body:not(.dark-mode) .card-text {
+      color: #000 !important;
+    }
 
-
-
-
-
+    body:not(.dark-mode) .form-label {
+      
+      color: #000 !important;
+    }
+    
 
 
 
@@ -150,7 +193,9 @@
   
   
 </head>
-<body>
+<body class="dark-mode">
+
+
   <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
       <a class="navbar-brand text-info" href="#">My Portfolio</a>
@@ -171,6 +216,14 @@
               LinkedIn
             </a>
           </li>
+
+          <li class="nav-item d-flex align-items-center ms-3">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="modeToggle">
+              <label class="form-check-label" for="modeToggle" style="font-size: 0.9rem;">Dark Mode</label>
+            </div>
+          </li>
+          
         </ul>
       </div>
     </div>
@@ -374,9 +427,38 @@
     &copy; <span id="year"></span> Rifat. All rights reserved.
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Set footer year
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  const toggle = document.getElementById('modeToggle');
+  const body = document.body;
+
+  function applyMode(mode) {
+    if (mode === 'light') {
+      body.classList.remove('dark-mode');
+      body.removeAttribute('data-bs-theme');
+    } else {
+      body.classList.add('dark-mode');
+      body.setAttribute('data-bs-theme', 'dark');
+    }
+  }
+
+  // Load saved mode or default to dark
+  const savedMode = localStorage.getItem('mode') || 'dark';
+  applyMode(savedMode);
+  toggle.checked = savedMode === 'dark';
+
+  // Handle toggle switch
+  toggle.addEventListener('change', () => {
+    const newMode = toggle.checked ? 'dark' : 'light';
+    localStorage.setItem('mode', newMode);
+    applyMode(newMode);
+  });
+</script>
+
+  
+  
 </body>
 </html>
