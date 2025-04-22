@@ -7,37 +7,6 @@ body {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Offcanvas Sidebar Styling */
-.offcanvas.offcanvas-start {
-  background-color: #000;
-  width: 250px;
-}
-
-.offcanvas .offcanvas-title {
-  color: #52D0FC;
-  font-weight: 600;
-}
-
-.offcanvas .nav-link {
-  color: #ffffff;
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-weight: 500;
-}
-
-.offcanvas .nav-link:hover {
-  color: #52D0FC;
-  background-color: #1a1a1a;
-  border-radius: 5px;
-}
-
-.offcanvas .btn-close {
-  filter: invert(1);
-}
-
-
 /* ===== Typography ===== */
 h2 {
   font-size: 2rem;
@@ -96,6 +65,37 @@ section {
     margin: 15px auto;
   }
 }
+
+/* Offcanvas Sidebar Styling */
+.offcanvas.offcanvas-start {
+  background-color: #000;
+  width: 250px;
+}
+
+.offcanvas .offcanvas-title {
+  color: #52D0FC;
+  font-weight: 600;
+}
+
+.offcanvas .nav-link {
+  color: #ffffff;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.offcanvas .nav-link:hover {
+  color: #52D0FC;
+  background-color: #1a1a1a;
+  border-radius: 5px;
+}
+
+.offcanvas .btn-close {
+  filter: invert(1);
+}
+
 
 /* ===== Paragraph Styling ===== */
 p {
